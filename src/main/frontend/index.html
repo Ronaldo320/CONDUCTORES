@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Transporte</title>
+    <link rel="stylesheet" href="/src/main/frontend/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Transporte</h1>
+    </header>
+    <nav>
+        <a href="#drivers" class="nav-link active">Conductores</a>
+        <a href="#vehicles" class="nav-link">Vehículos</a>
+        <a href="#assignments" class="nav-link">Asignaciones</a>
+    </nav>
+
+    <main id="drivers" class="view active">
+        <h2>Registrar Conductor</h2>
+        <form id="driverForm">
+            <label for="driverName">Nombre:</label>
+            <input type="text" id="driverName" required>
+            
+            <label for="driverId">Cédula:</label>
+            <input type="text" id="driverId" required>
+            
+            <label for="driverAge">Edad:</label>
+            <input type="number" id="driverAge" required>
+            
+            <label for="driverNationality">Nacionalidad:</label>
+            <input type="text" id="driverNationality" required>
+            
+            <label for="driverGender">Sexo:</label>
+            <select id="driverGender" required>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+            </select>
+            
+            <button type="submit">Registrar Conductor</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Cédula</th>
+                    <th>Edad</th>
+                    <th>Nacionalidad</th>
+                    <th>Sexo</th>
+                </tr>
+            </thead>
+            <tbody id="driversTable"></tbody>
+        </table>
+    </main>
+
+    <main id="vehicles" class="view">
+        <h2>Registrar Vehículo</h2>
+        <form id="vehicleForm">
+            <label for="vehiclePlate">Placa:</label>
+            <input type="text" id="vehiclePlate" required>
+            
+            <label for="vehicleType">Tipo de Vehículo:</label>
+            <select id="vehicleType" required>
+                <option value="Carro">Carro</option>
+                <option value="Camión">Camión</option>
+            </select>
+            
+            <button type="submit">Registrar Vehículo</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Placa</th>
+                    <th>Tipo</th>
+                </tr>
+            </thead>
+            <tbody id="vehiclesTable"></tbody>
+        </table>
+    </main>
+
+    <main id="assignments" class="view">
+        <h2>Asignar Conductor a Vehículo</h2>
+        <form id="assignmentForm">
+            <label for="assignDriver">Conductor:</label>
+            <select id="assignDriver" required></select>
+            
+            <label for="assignVehicle">Vehículo:</label>
+            <select id="assignVehicle" required></select>
+            
+            <button type="submit">Asignar</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Conductor</th>
+                    <th>Vehículo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="assignmentsTable"></tbody>
+        </table>
+    </main>
+    
+    <script src="/src/main/frontend/js/scripts.js"></script>
+</body>
+</html>
